@@ -14,6 +14,8 @@ func main() {
 	if err != nil {
 		fmt.Printf("Error Occurred %v", err)
 	} else {
+		newContent := fmt.Sprintf("Original: %v\n Double Original: %v%v", contents, contents, contents)
+		fileutils.WriteToFile("./text.txt", newContent)
 		fmt.Println(contents)
 	}
 }
